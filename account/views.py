@@ -15,9 +15,7 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 
 @login_required
 def dashboard(request):
-    if request.user.is_authenticated:
-        return render(request, 'account/user/dashboard.html')
-    return render(request, 'account/user/login.html')
+    return render(request, 'account/user/dashboard.html')
 
 @login_required
 def edit_details(request):
